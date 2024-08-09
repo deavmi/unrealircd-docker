@@ -1,0 +1,29 @@
+services:
+  ircd:
+    build:
+      context: ircd/.
+      args:
+        # Change these to the value of `id -u`
+        # on your HOST
+        - USER_UID=1000
+        # Change these to the value of `id -g`
+        # on your HOST
+        - USER_GID=1003
+    container_name: ircd
+    restart: unless-stopped
+    networks:
+      - mainNet
+    volumes:
+      # Configuration
+      - /mnt/datadisk/volumes/ircd/:/home/unreal/ircd/conf/
+      
+      # Makes timezone and time information available
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      # Client-to-server access
+      - "6667:6667"
+      - "6697:6697"
+      
+      # Server-to-server peering
+      - "6900:6900"
