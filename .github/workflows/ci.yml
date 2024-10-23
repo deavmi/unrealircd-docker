@@ -5,8 +5,8 @@ on:
   workflow_dispatch:
 
 env:
-  GHCR_NAMESPACE: neilalexander
-  GHCR_REPOSITORY: harmony
+  GHCR_NAMESPACE: deavmi
+  GHCR_REPOSITORY: unrealircd-docker
   PLATFORMS: linux/amd64,linux/arm/v8
 
 jobs:
