@@ -39,5 +39,10 @@ jobs:
           context: .
           platforms: ${{ env.PLATFORMS }}
           push: true
+          build-args:
+            USER_UID=1000
+            USER_GID=1003
+            BRANCH=unreal60_dev
+            COMMIT=30b9f66f716e69e0734620c9b356d66443de0d4d
           tags: |
             ghcr.io/${{ env.GHCR_NAMESPACE }}/${{ env.GHCR_REPOSITORY }}:${{ github.ref_name }}
