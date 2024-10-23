@@ -39,7 +39,7 @@ jobs:
           context: .
           platforms: ${{ env.PLATFORMS }}
           push: true
-          build-args:
+          build-args: |
             USER_UID=1000
             USER_GID=1003
             BRANCH=unreal60_dev
