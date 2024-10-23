@@ -36,8 +36,7 @@ jobs:
         with:
           cache-from: type=gha
           cache-to: type=gha,mode=max
-          context: ./ircd/
-          file: Dockerfile
+          context: .
           platforms: ${{ env.PLATFORMS }}
           push: true
           tags: |
