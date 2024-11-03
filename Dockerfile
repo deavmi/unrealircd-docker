@@ -5,15 +5,15 @@ MAINTAINER "Tristan Brice Velloza Kildaire" "deavmi@redxen.eu"
 # Don't allow interactive prompts when using apt
 ARG DEBIAN_FRONTEND=noninteractive
 
+# Upgrade the system's dependencies
+RUN apt update
+RUN apt upgrade -y
+
 # Activate arguments provided as build parameters
 ARG USER_UID
 ARG USER_GID
 ARG BRANCH
 ARG COMMIT
-
-# Upgrade the system's dependencies
-RUN apt update
-RUN apt upgrade -y
 
 # Install required build dependencies
 RUN apt install git gcc make -y
