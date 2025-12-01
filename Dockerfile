@@ -10,8 +10,6 @@ RUN apt update
 RUN apt upgrade -y
 
 # Activate arguments provided as build parameters
-ARG USER_UID
-ARG USER_GID
 ARG BRANCH
 ARG COMMIT
 
@@ -19,15 +17,8 @@ ARG COMMIT
 RUN apt install git gcc make -y
 RUN apt install libssl-dev -y
 
-# Create the unreal user
-# and group
-RUN groupadd unreal -g $USER_GID
-RUN useradd -m unreal -u $USER_UID -g $USER_GID
-
-# Switch to unreal user
-USER unreal
-
 # Clone sources
+RUN mkdir /home/unreal
 WORKDIR /home/unreal
 RUN echo Building with commit $COMMIT
 RUN git clone https://github.com/unrealircd/unrealircd.git --branch $BRANCH unrealircd
@@ -55,7 +46,6 @@ USER root
 RUN apt remove git gcc make -y
 RUN apt remove libssl-dev -y
 RUN apt autoremove -y
-USER unreal
 RUN rm -rfv /home/unreal/unrealircd
 
 # Change to directory we shall run from
