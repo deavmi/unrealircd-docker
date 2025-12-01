@@ -14,6 +14,7 @@ services:
     restart: unless-stopped
     networks:
       - mainNet
+    user: ${USER_UID}:${USER_GID}
     volumes:
       # Configuration
       - /mnt/datadisk/volumes/ircd/:/home/unreal/ircd/conf/
