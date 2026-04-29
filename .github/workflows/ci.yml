@@ -43,6 +43,6 @@ jobs:
             USER_UID=1000
             USER_GID=1003
             BRANCH=unreal60_dev
-            COMMIT=2d145b0f2ca320652037217c860159b4beef37e4
+            COMMIT=abbbcd16a97a6d6dfbde7af4590b1bc73ffdc7b2
           tags: |
             ghcr.io/${{ env.GHCR_NAMESPACE }}/${{ env.GHCR_REPOSITORY }}:${{ github.ref_name }}
