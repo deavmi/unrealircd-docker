@@ -44,8 +44,8 @@ RUN make install
 
 # Start a new layer and just copy across the
 # binaries, libraries etc.
-FROM build AS unrealircd
-COPY /ircd /ircd
+FROM debian:trixie AS base
+COPY --from build /ircd /ircd
 
 # Change to directory we shall run from
 # and start
