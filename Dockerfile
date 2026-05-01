@@ -1,5 +1,5 @@
 # Base image
-FROM debian:bookworm AS build
+FROM debian:trixie AS build
 MAINTAINER "Tristan Brice Velloza Kildaire" "deavmi@redxen.eu"
 
 # Don't allow interactive prompts when using apt
