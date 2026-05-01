@@ -1,4 +1,4 @@
-BASEPATH="/home/unreal/ircd"
+BASEPATH="/ircd"
 
 BINDIR=/ircd/bin
 DATADIR=/ircd/data
