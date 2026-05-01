@@ -1,21 +1,21 @@
-BASEPATH="/home/unreal/ircd"
+BASEPATH="/ircd"
 
-BINDIR=/home/unreal/ircd/bin
-DATADIR=/home/unreal/ircd/data
-CONFDIR=/home/unreal/ircd/conf
+BINDIR=/ircd/bin
+DATADIR=/ircd/data
+CONFDIR=/conf
 
-MODULESDIR=/home/unreal/ircd/modules
-LOGDIR=/home/unreal/ircd/logs
-CACHEDIR=/home/unreal/ircd/cache
-DOCDIR=/home/unreal/ircd/docs
-TMPDIR=/home/unreal/ircd/tmp
-PRIVATELIBDIR=/home/unreal/ircd/lib
+MODULESDIR=/ircd/modules
+LOGDIR=/conf/logs
+CACHEDIR=/conf/cache
+DOCDIR=/ircd/docs
+TMPDIR=/conf/tmp
+PRIVATELIBDIR=/ircd/lib
 
 MAXCONNECTIONS_REQUEST="auto"
 NICKNAMEHISTORYLENGTH="2000"
 GEOIP="classic"
 DEFPERM="0600"
-SSLDIR="/home/unreal/ircd/conf/tls"
+SSLDIR="/conf/tls"
 REMOTEINC=""
 CURLDIR=""
 NOOPEROVERRIDE=""
