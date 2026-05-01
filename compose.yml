@@ -31,7 +31,13 @@ services:
       - mainNet
     volumes:
       # Configuration
-      - /mnt/datadisk/volumes/ircd/:/home/unreal/ircd/conf/
+      #
+      # conf <- base directory
+      # conf/tls <- your TLS certificates
+      # conf/cache <- for caching
+      # conf/tmp <- temporary files
+      # conf/logs <- logs
+      - /mnt/datadisk/volumes/ircd/:/conf/
       
       # Makes timezone and time information available
       - /etc/timezone:/etc/timezone:ro
