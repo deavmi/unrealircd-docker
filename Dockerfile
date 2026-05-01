@@ -30,10 +30,6 @@ RUN git checkout $COMMIT
 # so we can run ./Config in non-interactive mode
 COPY config.settings ./config.settings
 
-# We will output to this folder
-RUN mkdir /ircd
-WORKDIR /ircd
-
 # Configure using `config.settings`
 # build and then install
 RUN ./Config -quick
