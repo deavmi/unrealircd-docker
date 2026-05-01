@@ -43,6 +43,10 @@ RUN make install
 FROM debian:trixie AS base
 COPY --from=build /ircd /ircd
 
+# Make EACH and EVERY file accessible
+# for execution, writing and reading
+RUN chmod -R  a+xrw /ircd -v
+
 # Change to directory we shall run from
 # and start
 WORKDIR /ircd
