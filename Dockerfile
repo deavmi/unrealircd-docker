@@ -42,6 +42,7 @@ RUN make install
 # binaries, libraries etc.
 FROM debian:trixie AS base
 COPY --from=build /ircd /ircd
+COPY --from=build /build/unrealircd/doc/conf /ircd/defaults
 
 # Make EACH and EVERY file accessible
 # for execution, writing and reading
