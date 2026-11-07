@@ -16,7 +16,7 @@ services:
         - BRANCH=unreal60_dev
         
         # Commit hash to checkout
-        - COMMIT=30b9f66f716e69e0734620c9b356d66443de0d4d
+        - COMMIT=89acd7d5e5d1d8a307cf3f2fde27bc86a3670037
     container_name: ircd
     restart: unless-stopped
     user: ${USER_UID}:${USER_GID}
